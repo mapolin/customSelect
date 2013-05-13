@@ -106,7 +106,7 @@ CustomSelect.prototype.init = function() {
 $.fn.customSelect = function(original, autoSearch, scrollPane) {
     return this.each(function() {
         var orig = $(this).find(original);
-        var cSelect = new CustomSelect($(this), orig, autoSearch);
+        var cSelect = new CustomSelect($(this), orig, autoSearch, scrollPane);
         $(this).data('customSelect', cSelect);
     });
 };
