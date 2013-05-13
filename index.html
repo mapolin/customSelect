@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Kewl </title>
+        <style>
+            .hover {
+                background: white;
+                color: black;
+            }
+            .select .default {
+                display: block;
+                float: left;
+                width: 301px;
+                height: 38px;
+                padding-left: 10px;
+                font: 13px/38px sans-serif;
+                text-decoration: none;
+            }
+            .dropDownHolder {
+                width: 309px;
+            }
+            .select .dropDown, 
+            .dropDown {
+                display: none;
+                background: #f9efd6;
+                border: solid 1px #a8997a;
+                border-top: none;
+                height: 255px;
+                width: 309px;
+                padding-top: 5px;
+                position: absolute;
+                top: 37px;
+                left: 136px;
+                z-index: 99;
+                overflow: auto;
+            }
+            .dropDown .jspVerticalBar {
+                right: 6px;
+            }
+            .dropDown .jspContainer {
+                padding-top: 10px;
+            }
+            .select .dropDown a,
+            .dropDown a {
+                display: block;
+                height: 23px;
+                line-height: 23px;
+                padding-left: 10px;
+                text-decoration: none;
+            }
+            .select .dropDown a:hover,
+            .dropDown a:hover {
+                background: #ebe0ca;
+            }
+        </style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+        <link type="text/css" href="jquery.jscrollpane.css" rel="stylesheet" media="all" />
+        <script type="text/javascript" src="jquery.mousewheel.js"></script>
+        <script type="text/javascript" src="jquery.jscrollpane.js"></script>
+
+        <script src="jquery.custom.select.js"></script>
+
+        <script type="text/javascript">
+            $(function() {
+                $('.dropDown').jScrollPane();
+                $('.select').customSelect($('.dropDown'), true, $('.dropDown'));
+            });
+        </script>
+    </head>
+    <body>
+        <fieldset class="select clearfix">
+            <label for="country">Country &#42;</label>
+            <input type="text" class="default" value="" />
+            <div class="dropDownHolder">
+                <div class="dropDown">
+                    <a href="#" value="Choose Country">Choose Country</a>
+                    <a href="#"  value="AL">Albania</a>
+                    <a href="#"  value="AD">Andorra</a>
+                    <a href="#"  value="AM">Armenia</a>
+                    <a href="#"  value="AT">Austria</a>
+                    <a href="#"  value="BY">Belarus</a>
+                    <a href="#"  value="BE">Belgium</a>
+                    <a href="#"  value="BA">Bosnia and Herzegovina</a>
+                    <a href="#"  value="BG">Bulgaria</a>
+                    <a href="#"  value="CH">Switzerland</a>
+                    <a href="#"  value="CY">Cyprus</a>
+                    <a href="#"  value="CZ">Czech Republic</a>
+                    <a href="#"  value="DE">Germany</a>
+                    <a href="#"  value="DK">Denmark</a>
+                    <a href="#"  value="EE">Estonia</a>
+                    <a href="#"  value="ES">Spain</a>
+                    <a href="#"  value="FO">Faeroe Islands</a>
+                    <a href="#"  value="FI">Finland</a>
+                    <a href="#"  value="FR">France</a>
+                    <a href="#"  value="GB">United Kingdom</a>
+                    <a href="#"  value="GE">Georgia</a>
+                    <a href="#"  value="GI">Gibraltar</a>
+                    <a href="#"  value="GR">Greece</a>
+                    <a href="#"  value="HU">Hungary</a>
+                    <a href="#"  value="HR">Croatia</a>
+                    <a href="#"  value="IE">Ireland</a>
+                    <a href="#"  value="IS">Iceland</a>
+                    <a href="#"  value="IT">Italy</a>
+                    <a href="#"  value="LT">Lithuania</a>
+                    <a href="#"  value="LU">Luxembourg</a>
+                    <a href="#"  value="LV">Latvia</a>
+                    <a href="#"  value="MC">Monaco</a>
+                    <a href="#"  value="MK">Macedonia</a>
+                    <a href="#"  value="MT">Malta</a>
+                    <a href="#"  value="NO">Norway</a>
+                    <a href="#"  value="NL">Netherlands</a>
+                    <a href="#"  value="PL">Poland</a>
+                    <a href="#"  value="PT">Portugal</a>
+                    <a href="#"  value="RO">Romania</a>
+                    <a href="#"  value="RU">Russian Federation</a>
+                    <a href="#"  value="SE">Sweden</a>
+                    <a href="#"  value="SI">Slovenia</a>
+                    <a href="#"  value="SK">Slovakia</a>
+                    <a href="#"  value="SM">San Marino</a>
+                    <a href="#"  value="TR">Turkey</a>
+                    <a href="#"  value="UA">Ukraine</a>
+                    <a href="#"  value="VA">Vatican City State</a> </div>
+                </div>
+            <select name="country" id="country">
+                <option>Choose Country</option>
+                <option  value="AL">Albania</option>
+                <option  value="AD">Andorra</option>
+                <option  value="AM">Armenia</option>
+                <option  value="AT">Austria</option>
+                <option  value="BY">Belarus</option>
+                <option  value="BE">Belgium</option>
+                <option  value="BA">Bosnia and Herzegovina</option>
+                <option  value="BG">Bulgaria</option>
+                <option  value="CH">Switzerland</option>
+                <option  value="CY">Cyprus</option>
+                <option  value="CZ">Czech Republic</option>
+                <option  value="DE">Germany</option>
+                <option  value="DK">Denmark</option>
+                <option  value="EE">Estonia</option>
+                <option  value="ES">Spain</option>
+                <option  value="FO">Faeroe Islands</option>
+                <option  value="FI">Finland</option>
+                <option  value="FR">France</option>
+                <option  value="GB">United Kingdom</option>
+                <option  value="GE">Georgia</option>
+                <option  value="GI">Gibraltar</option>
+                <option  value="GR">Greece/option>
+                <option  value="HU">Hungary</option>
+                <option  value="HR">Croatia</option>
+                <option  value="IE">Ireland</option>
+                <option  value="IS">Iceland</option>
+                <option  value="IT">Italy</option>
+                <option  value="LT">Lithuania</option>
+                <option  value="LU">Luxembourg</option>
+                <option  value="LV">Latvia</option>
+                <option  value="MC">Monaco</option>
+                <option  value="MK">Macedonia</option>
+                <option  value="MT">Malta</option>
+                <option  value="NO">Norway</option>
+                <option  value="NL">Netherlands</option>
+                <option  value="PL">Poland</option>
+                <option  value="PT">Portugal</option>
+                <option  value="RO">Romania</option>
+                <option  value="RU">Russian Federation</option>
+                <option  value="SE">Sweden</option>
+                <option  value="SI">Slovenia</option>
+                <option  value="SK">Slovakia</option>
+                <option  value="SM">San Marino</option>
+                <option  value="TR">Turkey</option>
+                <option  value="UA">Ukraine</option>
+                <option  value="VA">Vatican City State</option>
+            </select>
+            <span style="display:none;" class="error-message">This field <br> is mandatory</span>
+        </fieldset>
+    </body>
+</html>
