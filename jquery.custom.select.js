@@ -31,7 +31,7 @@ CustomSelect.prototype.findItem = function(value) {
     var top;
 
     for(var i = 0; i < this.items.length; i++) {
-        if(this.items.eq(i).html().toLowerCase().match(value)) {
+        if(this.items.eq(i).html().toLowerCase().indexOf(value) == 0) {
             this.items.removeClass('hover');
             this.items.eq(i).addClass('hover');
             
